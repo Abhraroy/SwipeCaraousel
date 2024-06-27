@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.Bg-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  overflow: hidden;
+}
+.my-swiper {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.SwipeDiv {
+  width: 576px;
+  height: 100%;
+  transition: all 0.3s linear;
+  position: relative;
+}
+.HeroShoe {
+  width: 500px;
+  height: 500px;
+  scale: 0.9;
+  object-fit: cover;
+  position: absolute;
+  z-index: 3;
+  top: -7%;
+  rotate: -13deg;
+  image-rendering: smooth;
+}
+
+.PlatformImg {
+  width: 576px;
+  height: 360px;
+  position: absolute;
+  top: 45%;
+  image-rendering: pixelated;
+}
+
+.Btn {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid red;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:red;
+}
+.Btn:hover{
+    background-color: red;
+    color:white;
+    transition: all 0.5s linear;
+}
+.Next {
+  top: 50%;
+  right: 25%;
+}
+.Prev {
+  top: 50%;
+  left: 25%;
+}
+.BgText{
+    position: absolute;
+    top:5%;
+    z-index: -1;
+    font-size: 20rem;
+    
+}
