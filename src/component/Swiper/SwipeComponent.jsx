@@ -34,6 +34,7 @@ function handleMovement(e){
         const Movey = (y-0.2)*20;
         item.style.transform = `translate(${Movex}px,${Movey}px)`
     });
+    
 } 
 
 
@@ -81,9 +82,9 @@ function SwipeComponent() {
             nextEl: ".Next.Btn",
             prevEl: ".Prev.Btn",
           }}
-          autoplay={{
-              delay:4000,
-          }}
+        //   autoplay={{
+        //       delay:4000,
+        //   }}
           speed={750}
           shortSwipes={true}
           spaceBetween={0}
