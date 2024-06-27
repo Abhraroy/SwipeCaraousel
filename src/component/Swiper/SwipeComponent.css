@@ -53,13 +53,14 @@
   position: absolute;
   top: 45%;
   image-rendering: pixelated;
+  pointer-events: none;
 }
 
 .Btn {
   width: 4rem;
   height: 4rem;
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   border: 1px solid red;
   border-radius: 50px;
   display: flex;
@@ -68,9 +69,7 @@
   color:red;
 }
 .Btn:hover{
-    background-color: red;
     color:white;
-    transition: all 0.5s linear;
 }
 .Next {
   top: 50%;
@@ -82,8 +81,29 @@
 }
 .BgText{
     position: absolute;
-    top:5%;
+    top:1%;
     z-index: -1;
     font-size: 20rem;
     
+}
+.lengthdiv1{
+    width:0%;
+    height:0%;
+    position: absolute;
+    background-color: blue;
+    left:-5%;
+    transition: all 0.1s linear;
+    border-radius: 50px;
+}
+.lengthdiv2{
+    width:0%;
+    height:0%;
+    position: absolute;
+    background-color: blue;
+    right:-5%;
+    transition: all 0.1s linear;
+    border-radius: 50px;
+}
+.SlideNavArrow{
+    z-index: 20;
 }

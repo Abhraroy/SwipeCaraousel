@@ -24,10 +24,47 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 
+function handleMovement(e){
+    let Moveimg = document.querySelectorAll('.HeroShoe')
+    Moveimg.forEach(item => {
+        const Axis = item.getBoundingClientRect()
+        const x = (e.clientX-Axis.left)/Axis.width;
+        const y = (e.clientY-Axis.top)/Axis.height;
+        const Movex = (x-0.2)*20;
+        const Movey = (y-0.2)*20;
+        item.style.transform = `translate(${Movex}px,${Movey}px)`
+    });
+} 
+
+
+function handleEnter1(){
+    let IncreaseDiv1 = document.querySelector('.lengthdiv1');
+    console.log('hey');
+    IncreaseDiv1.style.width='110%';
+    IncreaseDiv1.style.height='110%';
+}
+function handleLeave1(){
+    let IncreaseDiv1 = document.querySelector('.lengthdiv1');
+    IncreaseDiv1.style.width='0%';
+    IncreaseDiv1.style.height='0%';
+}
+function handleEnter2(){
+    let IncreaseDiv2 = document.querySelector('.lengthdiv2');
+    console.log('hey');
+    IncreaseDiv2.style.width='110%';
+    IncreaseDiv2.style.height='110%'
+}
+function handleLeave2(){
+    let IncreaseDiv2 = document.querySelector('.lengthdiv2');
+    IncreaseDiv2.style.width='0%';
+    IncreaseDiv2.style.height='0%'
+}
+
+
 function SwipeComponent() {
   return (
     <>
-      <div className="Bg-container">
+      <div className="Bg-container" onMouseMove={handleMovement} >
         <Swiper
           className="my-swiper"
           modules={[
@@ -104,11 +141,13 @@ function SwipeComponent() {
               <img className="PlatformImg" src={ElectroPlatform} alt="" />
             </div>
           </SwiperSlide>
-          <div className="Prev Btn">
-          <FaArrowLeftLong />
+          <div className="Prev Btn"  onMouseEnter={handleEnter1} onMouseLeave={handleLeave1}>
+            <div className="lengthdiv1"></div>
+          <FaArrowLeftLong className="SlideNavArrow"/>
           </div>
-          <div className="Next Btn">
-          <FaArrowRightLong />
+          <div className="Next Btn" onMouseEnter={handleEnter2} onMouseLeave={handleLeave2}>
+          <div className="lengthdiv2"></div>
+          <FaArrowRightLong className="SlideNavArrow"/>
           </div>
         </Swiper>
       </div>
